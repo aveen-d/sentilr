@@ -1,36 +1,28 @@
 # This is the file that implements a flask server to do inferences. It's the file that you will modify to
 # implement the scoring for your own algorithm.
 
-import os
+
 import json
-from sklearn.externals import joblib
+
 import flask
 from flask import Flask
-import pandas as pd
-import nltk
+
 
 from flask import render_template,request
 app = Flask(__name__)
 
-import sys
 
-import tarfile
-
-import time
-
-import pyprind
 
 import pandas as pd
 
-import numpy as np
+
 
 from sklearn.feature_extraction.text import CountVectorizer
 
-from sklearn.feature_extraction.text import TfidfTransformer
+
 
 import re
 
-from nltk.stem.porter import PorterStemmer
 
 import nltk
 
@@ -44,10 +36,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 from sklearn.model_selection import GridSearchCV
 
-from sklearn.model_selection import StratifiedKFold
 
-from sklearn.model_selection import cross_val_score
-from sklearn.externals import joblib
 
 def preprocessor(text):
 
@@ -145,7 +134,7 @@ def train(l):
     tfidf.fit_transform(X_train)
 
     #input_tokenized = tfidf.transform(["today was a great day"])
-    predictions = clf.predict(["today was a great day"])
+    predictions = clf.predict(l)
     print(type(predictions))
     return predictions
 
