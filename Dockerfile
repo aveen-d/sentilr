@@ -12,7 +12,7 @@ RUN apt-get update && \
 
 # Use an official Python runtime as a parent image
 
-FROM python:3.6.8
+FROM python:2.7.14
 
 
 
