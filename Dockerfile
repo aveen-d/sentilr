@@ -33,8 +33,6 @@ COPY . /app
 RUN pip install flask
 RUN pip install pandas
 RUN pip install sklearn
-RUN pip install re
-RUN pip install json
 RUN pip install nltk
 
 
